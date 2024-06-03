@@ -1,0 +1,49 @@
+<mat-toolbar class="responsive-toolbar">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+  </button>
+  <img
+    [src]="'/assets/money.png'"
+    alt="Money Icon"
+    class="responsive-image h-9"
+  />
+  <div>
+    <div  class="">
+      <img src="../../assets/Avatar.png" class="lg:h-12 xl:h-12 h-8" alt="" />
+    </div>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav>
+    <mat-nav-list>
+      <mat-list-item
+        (click)="sidenav.mode === 'over' && sidenav.toggle()"
+        routerLink="listCamp"
+        routerLinkActive="active"
+        class="sidenav-list-item"
+      >
+        <span class="textActive font-medium mb-2">Kampanyalar</span>
+        <mat-icon matListItemIcon> campaign </mat-icon>
+      </mat-list-item>
+
+      <mat-list-item
+        (click)="sidenav.mode === 'over' && sidenav.toggle()"
+        routerLink="createCamp"
+        routerLinkActive="active"
+      >
+        <mat-icon matListItemIcon> draw </mat-icon>
+        <span class="textActive font-medium">Kampanya Oluştur</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

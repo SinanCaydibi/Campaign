@@ -1,0 +1,35 @@
+.valid {
+  background-color: #012c61;
+  color: white;
+}
+
+.invalid {
+  background-color: #d6e2f0;
+  color: white;
+}
+
+::ng-deep .createAlert {
+  border-radius: 5px;
+  outline-offset: 2px;
+  outline: 3px solid #40A578;
+  --mdc-snackbar-container-color: #40A578;
+  --mdc-snackbar-supporting-text-color: #fff;
+  --mat-mdc-snack-bar-button-color: #fff;
+  --mdc-snackbar__label: #fff;
+  --mdc-snackbar-container-color: #40A578;
+  --mdc-snackbar-container-bottom: 20px;
+  --mat-snack-bar-button-color: white;
+  --mdc-snackbar-supporting-text-color: white;
+  font-size: 12px !important;
+  --mdc-snackbar-supporting-text-weight: 600 !important;
+  --mdc-snackbar-supporting-text-line-height: 20px;
+  --mdc-snackbar-supporting-text-font: "Gill Sans", sans-serif;
+
+  margin-bottom: 60px!important;
+
+}
+::ng-deep .createAlert button {
+  border: none;
+  --mat-mdc-snack-bar-button-color: #fff;
+}
+

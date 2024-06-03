@@ -1,0 +1,43 @@
+
+<div class="flex p-4"><span class="text-xl">Düzenle</span>
+<span class="mx-auto"></span>
+<span class="text-xl cursor-pointer"  (click)="close()">x</span>
+
+</div>
+<div mat-dialog-content class="flex justify-center">
+
+  <form [formGroup]="editCampaignForm" class="flex flex-col  w-full justify-center">
+    <label class="font-medium mb-2"
+      >Kampanya Başlığı<span style="color: red">*</span></label
+    >
+    <mat-form-field appearance="outline">
+      <input
+        formControlName="campaignTitle"
+        matInput
+        placeholder="Kampanya başlığını giriniz"
+      />
+    </mat-form-field>
+    <label class="font-medium mb-2"
+      >Açıklama<span style="color: red">*</span></label
+    >
+    <mat-form-field appearance="outline">
+      <textarea
+        formControlName="campaignDescription"
+        placeholder="Açıklamayı giriniz"
+        matInput
+      ></textarea>
+    </mat-form-field>
+
+
+  <button
+  class="p-4 rounded-md text-md w-full"
+  [ngClass]="!editCampaignForm.valid ? 'invalid' : 'valid'"
+  (click)="save()"
+>
+  Kaydet
+</button>
+  </form>
+</div>
+
+
+<!-- <button mat-button [mat-dialog-close]="editCampaignForm" cdkFocusInitial>Save</button> -->

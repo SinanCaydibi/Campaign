@@ -1,0 +1,33 @@
+<div class="grid grid-cols-1 sm:grid-cols-12 h-full">
+  <div class="col-span-full sm:col-span-6 h-full w-full flex flex-col justify-center items-center">
+    <div class="xl:w-2/3 sm:w-2/3 w-2/3 flex justify-center items-center">
+    <img  src="../../assets/money.png" alt="" />
+    </div>
+    <div class="flex w-full justify-center">
+      <form [formGroup]="userForm" class="flex flex-col lg:w-3/4 md:w-3/4 sm:w-3/4 mt-12 xl:w-2/5 w-5/6">
+        <label class="font-medium mb-2">Kullanıcı Adı</label>
+        <mat-form-field appearance="outline">
+          <input formControlName="username" matInput placeholder="Kullanıcı adını giriniz" />
+        </mat-form-field>
+        <label class="font-medium mb-2">Şifre</label>
+        <mat-form-field appearance="outline">
+          <input formControlName="password" type="password" matInput placeholder="Şifrenizi giriniz" />
+        </mat-form-field>
+
+        <button
+        class="p-4 rounded-md text-md"
+        (click)="login()"
+
+        [ngClass]="!userForm.valid ? 'invalid' : 'valid'">
+
+
+
+          Giriş Yap
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="lg:flex md:flex xl:flex sm:flex col-span-full sm:col-span-6  justify-center items-center hidden ">
+    <img src="../../assets/log.png"  class="mx-auto" alt="" />
+  </div>
+</div>

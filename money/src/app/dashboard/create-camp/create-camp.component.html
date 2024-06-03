@@ -1,0 +1,48 @@
+<div class="h-full flex flex-col justify-center items-center ca">
+  <span class="text-xl lg:text-3xl xl:text-3xl font-medium mb-8"
+    >Kampanya Oluştur</span
+  >
+  <form [formGroup]="campaignForm" class="flex flex-col lg:w-3/4 xl:3/4 w-full">
+    <label class="font-medium mb-2"
+      >Kampanya Başlığı<span style="color: red">*</span></label
+    >
+    <mat-form-field appearance="outline">
+      <input
+        formControlName="campaignTitle"
+        matInput
+        placeholder="Kampanya başlığını giriniz"
+      />
+    </mat-form-field>
+    <label class="font-medium mb-2"
+      >Açıklama<span style="color: red">*</span></label
+    >
+    <mat-form-field appearance="outline">
+      <textarea
+        formControlName="campaignDescription"
+        placeholder="Açıklamayı giriniz"
+        matInput
+      ></textarea>
+    </mat-form-field>
+    <label class="font-medium mb-2">Kampanya Tarihi</label>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="20/12/1994" formControlName="campaignDate" [matDatepicker]="picker" />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <label class="font-medium mb-2">Puan</label>
+    <mat-form-field appearance="outline">
+      <input formControlName="campaignPuan" type="number" matInput placeholder="0" />
+    </mat-form-field>
+
+    <button
+      class="p-4 rounded-md text-md"
+      (click)="save()"
+      [ngClass]="!campaignForm.valid ? 'invalid' : 'valid'"
+    >
+      Kampanya oluştur
+    </button>
+  </form>
+</div>

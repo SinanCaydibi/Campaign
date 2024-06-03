@@ -1,0 +1,68 @@
+mat-toolbar {
+  color: #ffffff;
+  height: 90px;
+  border-bottom: 1px solid #d0d5dd;
+  background-color: #fff;
+}
+
+mat-sidenav {
+  width: 300px;
+  border-right: 1px solid #d0d5dd;
+  padding: 1rem;
+}
+mat-sidenav-content {
+  background-color: #fff;
+}
+
+.content {
+  height: calc(100svh - 98px);
+  border-radius: 10px;
+  padding: 16px;
+  max-width: 1520px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+mat-sidebar-container {
+  height: calc(100svh - 65px);
+  background-color: #fff;
+}
+mat-drawer-content {
+  background-color: #fff;
+}
+
+// mat-list-item {
+//   padding: 0rem;
+//   color: #2b62c8 !important;
+// }
+
+mat-icon {
+  color: #012c61 !important;
+}
+
+.active {
+  background-color: #012c61 !important;
+  color: #fff !important;
+  & mat-icon {
+    color: #fff !important;
+  }
+  & .textActive {
+    color: #fff;
+  }
+}
+
+.responsive-toolbar {
+  display: flex; /* Allow horizontal layout */
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Distribute content evenly */
+}
+
+::ng-deep mat-mdc-card-avatar {
+  margin-bottom: 0px!important;
+
+}
+// .responsive-image {
+//   width: auto; /* Allow image to shrink proportionally */
+//   height: 50px; /* Set a fixed height for consistency */
+//   object-fit: contain; /* Maintain aspect ratio and scale to fit */
+// }

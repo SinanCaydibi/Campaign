@@ -1,0 +1,45 @@
+.valid {
+  background-color: #012C61;
+  color: white;
+}
+
+.invalid {
+  background-color: #D6E2F0;
+  color: white;
+}
+
+::ng-deep .errorAlert{
+
+  border-radius: 5px;
+  outline-offset: 2px;
+  outline: 3px solid #FF0000;
+  --mdc-snackbar-container-color:#FF0000;
+  --mdc-snackbar-supporting-text-color:#fff;
+  --mat-mdc-snack-bar-button-color:#fff;
+  --mdc-snackbar__label:#fff;
+  --mdc-snackbar-container-color: red;
+  --mat-snack-bar-button-color: white;
+  --mdc-snackbar-supporting-text-color: white;
+  font-size: 12px!important;
+  --mdc-snackbar-supporting-text-weight:600!important;
+  --mdc-snackbar-supporting-text-line-height:20px;
+  --mdc-snackbar-supporting-text-font:"Gill Sans", sans-serif;
+    margin-bottom: 60px!important;
+
+
+
+
+
+
+}
+::ng-deep .errorAlert button{
+
+ border: none;
+ --mat-mdc-snack-bar-button-color:#fff;
+
+
+}
+
+
+
+
